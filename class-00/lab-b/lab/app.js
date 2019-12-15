@@ -1,3 +1,4 @@
+
 'use strict';
 
 // STEP 1
@@ -199,16 +200,9 @@ console.log(joe.scopeArrow());
 
 // TODO: Write a COMMENT below to answer the following questions.
 // 1. What is "this" when joe.scope() is invoked?
-<<<<<<< HEAD
-//
+// undif
 // 2. What is "this" when joe.scopeArrow() is invoked?
 //
 // 3. Explain why "this" is different when an arrow function is used.
 //
-=======
-// undefind
-// 2. What is "this" when joe.scopeArrow() is invoked?
-// undefind
-// 3. Explain why "this" is different when an arrow function is used.
-// In classic function expressions, the this keyword is bound to different values based on the context in which it is called. With arrow functions however, this is lexically bound. It means that it usesthis from the code that contains the arrow function
->>>>>>> 9b5b2b24c35ede6656fc0142a4e86e4e0541c9ff
+
