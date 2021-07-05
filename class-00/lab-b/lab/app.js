@@ -1,3 +1,4 @@
+
 'use strict';
 
 // STEP 1
@@ -107,28 +108,40 @@ console.log('Hello from the new object function', newObject(['hi', 'hello', 'are
 // Write your solutions on a single line wherever possible.
 
 
-
-let sum = function(a, b, c, d) {
-  return a + b + c + d;
-};
+// eslint-disable-next-line no-unused-expressions
+let sum = (a,b,c,d) => { return a + b + c + d; };
+// let sum = function(a, b, c, d) {
+//   return a + b + c + d;s
+// };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 console.log(sum(1, 2, 3, 4));
 
 
-let objectLit = function() {
+// let objectLit = function() {
+//   return {
+//     key1: 'value1',
+//     key2: 'value2',
+//     key3: 'value3',
+//   };
+// };
+let objectLit = ()=>{
   return {
     key1: 'value1',
     key2: 'value2',
     key3: 'value3',
   };
 };
-
 // TODO: Uncomment the following line of code to see the output in the browser console
 console.log(objectLit());
 
 
-let sumAndProduct = function(a, b) {
+// let sumAndProduct = function(a, b) {
+//   let sum = a + b;
+//   let product = a * b;
+//   return [sum, product];
+// };
+let sumAndProduct = (a ,b)=>{
   let sum = a + b;
   let product = a * b;
   return [sum, product];
@@ -138,7 +151,10 @@ let sumAndProduct = function(a, b) {
 console.log(sumAndProduct(3, 9));
 
 
-let message = function(name) {
+// let message = function(name) {
+//   return `Hello, ${name}!`;
+// };
+let message = (name) =>{
   return `Hello, ${name}!`;
 };
 
@@ -152,8 +168,13 @@ let Student = function(name, age, hometown) {
   this.hometown = hometown;
 };
 
+// let Student = (name ,age ,hometown) =>{
+//   this.name = name;
+//   this.age = age;
+//   this.hometown = hometown;
+// };
+// when I do the arrow function in the constracter function  it's give me Error
 let joe = new Student('Joe', 'Schmoe', 100);
-
 // TODO: Uncomment the following line of code to see the output in the browser console
 // Note that the arrow function will cause this code to break!
 console.log(joe);
@@ -165,6 +186,10 @@ console.log(joe);
 Student.prototype.greeting = function() {
   return `Hi, my name is ${this.name}`;
 };
+// Student.prototype.greeting = () =>{
+//   return `Hi, my name is ${this.name}`;
+// };
+// this name is give me undifiend
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 // Note that the arrow function will cause this method to break!
@@ -174,7 +199,10 @@ console.log(joe.greeting());
 
 
 
-Student.courseName = function() {
+// Student.courseName = function() {
+//   return 'This student is enrolled in Code 301.';
+// };
+Student.courseName = () =>{
   return 'This student is enrolled in Code 301.';
 };
 
@@ -188,10 +216,13 @@ console.log(Student.courseName());
 Student.prototype.scope = function() {
   console.log(this);
 };
-
+// Student.prototype.scope = ()=>{
+//   console.log(this);
+// };
+// this is give window
 // TODO: Uncomment the following line of code to see the output in the browser console
 console.log(joe.scope());
-
+// its give me undifinend
 Student.prototype.scopeArrow = () => console.log(this);
 
 // TODO: Uncomment the following line of code to see the output in the browser console
@@ -199,9 +230,9 @@ console.log(joe.scopeArrow());
 
 // TODO: Write a COMMENT below to answer the following questions.
 // 1. What is "this" when joe.scope() is invoked?
-//
+// undefiend
 // 2. What is "this" when joe.scopeArrow() is invoked?
-//
+// undefiend
 // 3. Explain why "this" is different when an arrow function is used.
-//
+// In classic function expressions, the this keyword is bound to different values based on the context in which it is called. With arrow functions , this is lexically bound. It means that it usesthis from the code that contains the arrow function
 
